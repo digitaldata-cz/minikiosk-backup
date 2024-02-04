@@ -5,7 +5,6 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:kiosk_mode/kiosk_mode.dart';
-import 'package:global_settings_list/global_settings_list.dart';
 
 import 'package:webview_flutter/webview_flutter.dart';
 // #docregion platform_imports
@@ -22,9 +21,6 @@ void main() {
 
   // Disable android swipe back gesture.
   startKioskMode();
-
-  GlobalSettingsList.adbEnabled = true;
-  Settings.Global.putInt(getContentResolver(), Settings.Global.AUTO_TIME, 0);
 
   runApp(const MaterialApp(home: WebView()));
 }
@@ -118,7 +114,7 @@ class _WebViewState extends State<WebView> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: _showAppbar ? 56 : 0,
-        title: const Text('UniKiosk - Admin mode'),
+        title: const Text('MiniKiosk - Admin mode'),
         foregroundColor: Colors.white,
         backgroundColor: Colors.deepPurpleAccent,
         actions: <Widget>[

@@ -1,4 +1,4 @@
-package com.example.unikiosk
+package com.example.minikiosk
 
 import io.flutter.embedding.android.FlutterActivity
 

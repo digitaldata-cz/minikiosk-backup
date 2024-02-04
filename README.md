@@ -1,4 +1,4 @@
-# unikiosk
+# MiniKiosk
 
 A new Flutter project.
 
